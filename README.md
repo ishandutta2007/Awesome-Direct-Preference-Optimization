@@ -1,11 +1,16 @@
-# Awesome-Direct-Preference-Optimization
-## Direct Preference Optimization (DPO): History, Progression, Variants, & Applications
+# 🚀 Awesome-Direct-Preference-Optimization
+
+<p align="center">
+  <img src="assets/banner.svg" alt="Banner" width="100%">
+</p>
+
+## 🎯 Direct Preference Optimization (DPO): History, Progression, Variants, & Applications
 
 Direct Preference Optimization (DPO) is a foundational post-training alignment framework used to steer Large Language Models (LLMs) toward human-preferred behaviors, formatting styles, and safety parameters [INDEX: 11]. Introduced by Rafailov et al. in 2023 ("Direct Preference Optimization: Your Language Model is Secretly a Reward Model"), DPO bypassed the traditional Reinforcement Learning from Human Feedback (RLHF) paradigm [INDEX: 11]. By mathematically reparameterizing the relationship between a language policy and its implicit reward function, DPO proves that an LLM can be fine-tuned directly on pairwise preference data using a simple binary cross-entropy loss [INDEX: 11]. This completely eliminates the need to train a separate reward model or stabilize volatile actor-critic reinforcement learning loops, drastically lowering computing overhead and accelerating alignment pipelines [INDEX: 11].
 
 ---
 
-## 1. The Macro Chronological Evolution
+## 🕰️ 1. The Macro Chronological Evolution
 
 The technical approach to preference optimization has transitioned from multi-model actor-critic loops to static mathematical reparameterizations, moving toward reference-free and online iterative self-correction ecosystems.
 
@@ -24,7 +29,7 @@ flowchart LR
 
 ---
 
-## 2. Core Algorithmic & Objective Variants
+## 🧮 2. Core Algorithmic & Objective Variants
 
 The DPO family tree features specialized mathematical loss modifications engineered to prevent over-smoothing, fix data imbalances, or remove auxiliary reference networks.
 
@@ -37,7 +42,7 @@ The DPO family tree features specialized mathematical loss modifications enginee
 
 ---
 
-## 3. Training Training Pipelines & Data Ingestion Modalities
+## ⚙️ 3. Training Training Pipelines & Data Ingestion Modalities
 
 Depending on how preference data is evaluated and refreshed during the post-training lifecycle, DPO is deployed across distinct scheduling tracks.
 
@@ -49,7 +54,7 @@ Depending on how preference data is evaluated and refreshed during the post-trai
 
 ---
 
-## 4. Production Engineering Challenges & Mitigations
+## 🛡️ 4. Production Engineering Challenges & Mitigations
 
 Deploying direct preference optimization pipelines across large-scale commercial architectures introduces critical behavioral drift vulnerabilities and loss constraints.
 
@@ -60,7 +65,7 @@ Deploying direct preference optimization pipelines across large-scale commercial
 
 ---
 
-## 5. Frontier Real-World AI Applications
+## 🌍 5. Frontier Real-World AI Applications
 
 | Application Area | Details | Year | Paper |
 |---|---|---|---|
@@ -70,7 +75,7 @@ Deploying direct preference optimization pipelines across large-scale commercial
 
 ---
 
-## References
+## 📚 References
 1. Ouyang, L., et al. (2022). Training language models to follow instructions with human feedback. *Advances in Neural Information Processing Systems (NeurIPS)*, 35, 27730-27744 [INDEX: 11].
 2. Rafailov, R., et al. (2023). Direct preference optimization: Your language model is secretly a reward model. *Advances in Neural Information Processing Systems (NeurIPS)* [INDEX: 11].
 3. Azar, M. G., et al. (2024). A general theoretical framework for direct preference optimization. *International Conference on Machine Learning (ICML)* [INDEX: 11].

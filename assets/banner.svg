@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%">
+    <defs>
+        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <rect width="800" height="200" fill="url(#grad)" rx="15" ry="15" />
+    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="white">
+        Awesome Direct Preference Optimization
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+    </text>
+    <circle cx="100" cy="100" r="20" fill="white" opacity="0.3">
+        <animate attributeName="cy" values="100;50;100" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="100" r="20" fill="white" opacity="0.3">
+        <animate attributeName="cy" values="100;150;100" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+</svg>
