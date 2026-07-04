@@ -28,22 +28,22 @@ The technical approach to preference optimization has transitioned from multi-mo
 
 The DPO family tree features specialized mathematical loss modifications engineered to prevent over-smoothing, fix data imbalances, or remove auxiliary reference networks.
 
-### A. Standard DPO (Bradley-Terry Formulation)
-*   **Mechanism:** Optimizes policy parameters directly over static, pre-curated chosen ($y_w$) and rejected ($y_l$) text paths [INDEX: 11]:
-    $$\mathcal{L}_{\text{DPO}}(\pi_\theta; \pi_{\text{ref}}) = -\mathbb{E}_{(x, y_w, y_l) \sim \mathcal{D}} \left[ \log \sigma \left( \beta \log \frac{\pi_\theta(y_w|x)}{\pi_{\text{ref}}(y_w|x)} - \beta \log \frac{\pi_\theta(y_l|x)}{\pi_{\text{ref}}(y_l|x)} \right) \right]$$
-*   **Behavior:** Amplifies the probabilities of winning paths while penalizing losing paths, bounded by a regularization coefficient ($\beta$) [INDEX: 11].
+- ### A. Standard DPO (Bradley-Terry Formulation)
+	*   **Mechanism:** Optimizes policy parameters directly over static, pre-curated chosen ($y_w$) and rejected ($y_l$) text paths [INDEX: 11]:
+	    $$\mathcal{L}_{\text{DPO}}(\pi_\theta; \pi_{\text{ref}}) = -\mathbb{E}_{(x, y_w, y_l) \sim \mathcal{D}} \left[ \log \sigma \left( \beta \log \frac{\pi_\theta(y_w|x)}{\pi_{\text{ref}}(y_w|x)} - \beta \log \frac{\pi_\theta(y_l|x)}{\pi_{\text{ref}}(y_l|x)} \right) \right]$$
+	*   **Behavior:** Amplifies the probabilities of winning paths while penalizing losing paths, bounded by a regularization coefficient ($\beta$) [INDEX: 11].
 
-### B. Identity Preference Optimization (IPO)
-*   **Mechanism:** Appends an explicit root-mean-square regularizer straight to the DPO objective function to address the problem of over-fitting [INDEX: 11].
-*   **Pros:** Prevents the model's likelihood ratios from expanding exponentially, preserving formatting diversity and output variance during early optimization epochs [INDEX: 11].
+- ### B. Identity Preference Optimization (IPO)
+	*   **Mechanism:** Appends an explicit root-mean-square regularizer straight to the DPO objective function to address the problem of over-fitting [INDEX: 11].
+	*   **Pros:** Prevents the model's likelihood ratios from expanding exponentially, preserving formatting diversity and output variance during early optimization epochs [INDEX: 11].
 
-### C. Kahneman-Tversky Optimization (KTO)
-*   **Mechanism:** Models the alignment loss to replicate behavioral utility mapping (Prospect Theory), showing that humans perceive losses more severely than equivalent rewards [INDEX: 11].
-*   **Pros:** Bypasses the strict requirement for paired data [INDEX: 11]. It can optimize a model over decoupled, unpaired data rows tagged independently as *Desirable* or *Undesirable*, making real-world user logs directly actionable [INDEX: 11].
+- ### C. Kahneman-Tversky Optimization (KTO)
+	*   **Mechanism:** Models the alignment loss to replicate behavioral utility mapping (Prospect Theory), showing that humans perceive losses more severely than equivalent rewards [INDEX: 11].
+	*   **Pros:** Bypasses the strict requirement for paired data [INDEX: 11]. It can optimize a model over decoupled, unpaired data rows tagged independently as *Desirable* or *Undesirable*, making real-world user logs directly actionable [INDEX: 11].
 
-### D. Odds Ratio Preference Optimization (ORPO)
-*   **Mechanism:** Merges the Supervised Fine-Tuning (SFT) phase and the preference alignment phase into a single, unified loss calculation by tracking token odds ratios [INDEX: 11].
-*   **Pros:** Eliminates the final remaining memory bottleneck by completely removing the active Reference Model ($\pi_{\text{ref}}$) from VRAM [INDEX: 11].
+- ### D. Odds Ratio Preference Optimization (ORPO)
+	*   **Mechanism:** Merges the Supervised Fine-Tuning (SFT) phase and the preference alignment phase into a single, unified loss calculation by tracking token odds ratios [INDEX: 11].
+	*   **Pros:** Eliminates the final remaining memory bottleneck by completely removing the active Reference Model ($\pi_{\text{ref}}$) from VRAM [INDEX: 11].
 
 ---
 
