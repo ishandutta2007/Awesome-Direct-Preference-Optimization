@@ -93,3 +93,13 @@ To advance this documentation repository, structural setup, or post-training pip
 * Build a **Python script using the Hugging Face TRL (Transformer Reinforcement Learning) library** illustrating how to instantiate a basic `DPOTrainer` loop configured over a local LoRA model adapter graph [INDEX: 11].
 * Generate a **comprehensive Markdown table** explicitly comparing PPO, DPO, IPO, KTO, and ORPO across memory complexity constraints, requirement for paired vs. unpaired data inputs, vulnerability to probability saturation, and downstream training convergence metrics [INDEX: 11, 16].
 
+##  Star History
+<div align="center">
+<a href="https://www.star-history.com/?repos=ishandutta2007%2FAwesome-Direct-Preference-Optimization&type=date&legend=bottom-right">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Direct-Preference-Optimization&type=date&theme=dark&legend=bottom-right" />
+<source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Direct-Preference-Optimization&type=date&legend=bottom-right" />
+<img alt="Star History Chart" src="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Direct-Preference-Optimization&type=date&legend=bottom-right" />
+</picture>
+</a>
+</div>
