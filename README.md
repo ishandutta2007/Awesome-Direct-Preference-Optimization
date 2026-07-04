@@ -4,6 +4,10 @@
   <img src="assets/banner.svg" alt="Banner" width="100%">
 </p>
 
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+</p>
+
 ## 🎯 Direct Preference Optimization (DPO): History, Progression, Variants, & Applications
 
 Direct Preference Optimization (DPO) is a foundational post-training alignment framework used to steer Large Language Models (LLMs) toward human-preferred behaviors, formatting styles, and safety parameters [INDEX: 11]. Introduced by Rafailov et al. in 2023 ("Direct Preference Optimization: Your Language Model is Secretly a Reward Model"), DPO bypassed the traditional Reinforcement Learning from Human Feedback (RLHF) paradigm [INDEX: 11]. By mathematically reparameterizing the relationship between a language policy and its implicit reward function, DPO proves that an LLM can be fine-tuned directly on pairwise preference data using a simple binary cross-entropy loss [INDEX: 11]. This completely eliminates the need to train a separate reward model or stabilize volatile actor-critic reinforcement learning loops, drastically lowering computing overhead and accelerating alignment pipelines [INDEX: 11].
